@@ -1,0 +1,107 @@
+git --version 
+
+To configure the user details
+
+# git config --global user.name 'Praveen'
+
+# git config --global user.email 'praveenthuyamani@gmail.com'
+
+To initialize the git in the local directory 
+
+#git init
+
+# git config --global init.defaultBranch main
+
+#git status
+
+#git add readme.md
+
+#git add .
+
+#git commit -m 'Add readme.md  file'
+
+#git checkout <hash> # To switch the head to the particular commit
+
+#git checkout main
+
+#git branch -m main
+
+#git remote add origin <repo-url>
+
+#git push -u origin main (If this didn't work follow the below)
+
+# git push https://PraveenManidev@github.com/PraveenManidev/mastering_git.git
+
+(Now try with the git push)
+
+#git branch <branch-name>
+
+#git checkout <branch-name>
+
+#git checkout -b <branch-name> (Create branch and checkout to that branch)
+
+#git branch <new-branch-name> <source-branch>
+
+#git push --set-upstream origin feature-branch
+
+#git pull
+
+Resolve Conflicts:
+
+PR 1 - Yours 
+PR 2 - Collegue
+
+Collegues changes are merged into main 
+
+You are facing conflicts
+
+Checkout to main + Pull the latest changes from main 
+
+Checkout to your branch + git merge main (Inverse action performing)
+
+Resolve the conflicts manually and push the changes.
+
+Advanced GIT
+
+You have performed 10 commits
+
+You want to delete the all the commits after the 3rd commit because you might be wrote some bad code after the 3rd commit so you dont want those, But you want to keep these changes in track thats where we use 
+
+git reset
+
+	1) Soft reset     #git reset --soft <commit-hash> -- This will keep the changes in staging
+	2) Mixed reset #git reset <commit-hash> - Unstages the changes and keeps in working directory
+	3) Hard reset   #git reset --hard<commit-hash> - This will completely remove from working and staging
+
+git revert
+
+You have made a deployment which broke the production and you want to undo its effect without loosing the commit history.
+
+Dont want anything to hide and clear track changes of all the commits.
+
+git revert <commit-hash>
+
+(Resolve the mini conflict)
+
+git revert --continue
+
+
+git stash 
+
+Lets say you are middle of developing a feature, an urgent bug caused by your team mates comes up and your boss wants you to work on it first. You haven't finished the feature and you haven't committed yet. But you have to keep your active changes somewhere, and get back them later on and start working on the bug soon.
+
+Lets you temporarily save your uncommited changes in both staged and unstaged without actually committing them.
+
+#git stash - Save your changes
+#git stash list
+#git stash apply stash@{0}
+
+And work on the changes.
+
+
+
+
+
+
+
+
